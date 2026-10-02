@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SAFAR FOUNDATION | Be the Reason Someone Smiles</title>
+
+  <meta name="description"
+        content="SAFAR FOUNDATION works towards education, healthcare, food support, disability assistance, disaster relief and better living for communities in need.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #073b4c;
+      --navy-dark: #052d3a;
+      --green: #168b70;
+      --green-light: #55b996;
+      --cream: #f8f7f0;
+      --white: #ffffff;
+      --text: #29404a;
+      --muted: #6d7b80;
+      --shadow: 0 18px 50px rgba(7, 59, 76, 0.10);
+      --radius: 22px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(7,59,76,0.07);
+    }
+
+    nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: .5px;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      line-height: 1.05;
+      font-size: 18px;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--green);
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-top: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .nav-btn {
+      background: var(--green);
+      color: white !important;
+      padding: 11px 19px;
+      border-radius: 50px;
+    }
+
+    .nav-btn:hover {
+      background: var(--navy);
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--navy);
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 760px;
+      padding-top: 125px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 90% 20%, rgba(85,185,150,.20), transparent 28%),
+        radial-gradient(circle at 5% 90%, rgba(22,139,112,.10), transparent 25%),
+        var(--cream);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: rgba(22,139,112,.07);
+      right: -170px;
+      bottom: -180px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      color: var(--navy);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(45px, 6vw, 76px);
+      line-height: 1.04;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--green);
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 25px;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: .25s;
+      border: 2px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: white;
+      box-shadow: 0 10px 25px rgba(22,139,112,.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: var(--navy);
+    }
+
+    .btn-outline {
+      color: var(--navy);
+      border-color: rgba(7,59,76,.2);
+      background: rgba(255,255,255,.5);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    .hero-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-card {
+      width: min(440px, 100%);
+      aspect-ratio: 1 / 1;
+      background: rgba(255,255,255,.72);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(22,139,112,.12);
+      position: relative;
+    }
+
+    .logo-card::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px dashed rgba(22,139,112,.25);
+      border-radius: 50%;
+    }
+
+    .logo-card img {
+      width: 75%;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ================= SECTIONS ================= */
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 52px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: clamp(34px, 4vw, 48px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      background: linear-gradient(145deg, #e5f4ed, #f8f7f0);
+      min-height: 400px;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-image img {
+      width: 85%;
+    }
+
+    .about-content h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 43px;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 17px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-top: 22px;
+    }
+
+    .check-list li {
+      margin: 11px 0;
+      font-weight: 600;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      width: 25px;
+      height: 25px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: #dff3ea;
+      color: var(--green);
+      margin-right: 10px;
+      font-weight: 800;
+    }
+
+    /* ================= CAUSES ================= */
+
+    .causes {
+      background: var(--cream);
+    }
+
+    .cause-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .cause-card {
+      background: white;
+      padding: 30px 26px;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 30px rgba(7,59,76,.06);
+      transition: .3s;
+      border: 1px solid rgba(7,59,76,.05);
+    }
+
+    .cause-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .cause-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e4f4ee;
+      font-size: 27px;
+      margin-bottom: 20px;
+    }
+
+    .cause-card h3 {
+      color: var(--navy);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .cause-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ================= IMPACT ================= */
+
+    .impact {
+      background: var(--navy);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .impact .section-heading h2 {
+      color: white;
+    }
+
+    .impact .section-heading p {
+      color: rgba(255,255,255,.72);
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .impact-card {
+      text-align: center;
+      padding: 28px 15px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      border-radius: 20px;
+    }
+
+    .impact-number {
+      font-size: 42px;
+      font-weight: 800;
+      color: #72d3ae;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .impact-card p {
+      color: rgba(255,255,255,.75);
+      font-size: 14px;
+    }
+
+    /* ================= MISSION ================= */
+
+    .mission {
+      background: white;
+    }
+
+    .mission-box {
+      background: linear-gradient(135deg, #e8f6ef, #f8f7f0);
+      border-radius: 30px;
+      padding: 55px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .mission-box h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 40px;
+      margin-bottom: 17px;
+    }
+
+    .mission-box p {
+      color: var(--muted);
+      max-width: 720px;
+      margin: auto;
+    }
+
+    /* ================= DONATE ================= */
+
+    .donate {
+      background:
+        radial-gradient(circle at 10% 20%, rgba(85,185,150,.18), transparent 25%),
+        var(--cream);
+    }
+
+    .donate-box {
+      background: white;
+      border-radius: 30px;
+      padding: 55px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr .75fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .donate-content h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 42px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .donate-content p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .donation-card {
+      background: var(--navy);
+      color: white;
+      border-radius: 24px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .donation-card h3 {
+      margin-bottom: 15px;
+    }
+
+    .upi-box {
+      background: white;
+      color: var(--navy);
+      padding: 16px;
+      border-radius: 14px;
+      font-size: 18px;
+      font-weight: 800;
+      word-break: break-all;
+      margin: 20px 0;
+    }
+
+    .donation-note {
+      font-size: 12px;
+      color: rgba(255,255,255,.7);
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .contact-card {
+      text-align: center;
+      padding: 32px 20px;
+      border: 1px solid #e8eeee;
+      border-radius: 20px;
+    }
+
+    .contact-card .icon {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .contact-card h3 {
+      color: var(--navy);
+      margin-bottom: 7px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #042c39;
+      color: white;
+      padding: 60px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 40px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand img {
+      width: 60px;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .footer-brand h3 {
+      font-size: 20px;
+    }
+
+    footer p {
+      color: rgba(255,255,255,.65);
+      font-size: 14px;
+    }
+
+    footer h4 {
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin: 8px 0;
+      color: rgba(255,255,255,.65);
+      font-size: 14px;
+    }
+
+    .footer-links li:hover {
+      color: white;
+    }
+
+    .copyright {
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255,255,255,.55);
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 850px) {
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 22px;
+        flex-direction: column;
+        box-shadow: 0 15px 30px rgba(0,0,0,.08);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 135px 0 80px;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .donate-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-logo {
+        order: -1;
+      }
+
+      .logo-card {
+        width: 290px;
+      }
+
+      .cause-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .impact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        min-height: 300px;
+      }
+
+      .donate-box {
+        padding: 30px 22px;
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 550px) {
+
+      section {
+        padding: 70px 0;
+      }
+
+      .brand-text {
+        font-size: 15px;
+      }
+
+      .brand-text span {
+        font-size: 9px;
+      }
+
+      .brand img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .cause-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .impact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .impact-number {
+        font-size: 32px;
+      }
+
+      .mission-box {
+        padding: 35px 22px;
+      }
+
+      .mission-box h2,
+      .donate-content h2,
+      .about-content h2 {
+        font-size: 33px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header>
+    <div class="container">
+      <nav>
+
+        <a href="#home" class="brand">
+          <img src="logo.png" alt="SAFAR FOUNDATION Logo">
+
+          <div class="brand-text">
+            SAFAR
+            <span>FOUNDATION</span>
+          </div>
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#causes">Our Causes</a></li>
+          <li><a href="#impact">Our Impact</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-btn" href="#donate">Donate</a></li>
+        </ul>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <div class="hero-content">
+
+            <div class="eyebrow">
+              ✦ Together We Can Make A Difference
+            </div>
+
+            <h1>
+              Be The Reason
+              <span>Someone Smiles.</span>
+            </h1>
+
+            <p>
+              SAFAR FOUNDATION is committed to creating positive change
+              by supporting people and communities in need through
+              compassion, dignity and meaningful action.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#donate" class="btn btn-primary">
+                ❤️ Support Our Cause
+              </a>
+
+              <a href="#about" class="btn btn-outline">
+                Discover Our Mission
+              </a>
+            </div>
+
+          </div>
+
+          <div class="hero-logo">
+            <div class="logo-card">
+              <img src="logo.png" alt="SAFAR FOUNDATION">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-image">
+            <img src="logo.png" alt="SAFAR FOUNDATION">
+          </div>
+
+          <div class="about-content">
+
+            <div class="eyebrow">Who We Are</div>
+
+            <h2>
+              A journey towards
+              a better tomorrow.
+            </h2>
+
+            <p>
+              SAFAR FOUNDATION believes that every individual deserves
+              dignity, opportunity and a chance to live a better life.
+            </p>
+
+            <p>
+              Our work focuses on helping communities facing challenges
+              related to food, education, healthcare, disability,
+              disaster relief and housing.
+            </p>
+
+            <ul class="check-list">
+              <li>Compassion-driven initiatives</li>
+              <li>Community-focused support</li>
+              <li>Education and empowerment</li>
+              <li>Help during difficult times</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= CAUSES ================= -->
+
+    <section class="causes" id="causes">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">What We Do</div>
+
+          <h2>Small Actions. Meaningful Change.</h2>
+
+          <p>
+            Every contribution can help create a positive difference
+            in someone's life.
+          </p>
+
+        </div>
+
+
+        <div class="cause-grid">
+
+          <div class="cause-card">
+            <div class="cause-icon">🍚</div>
+            <h3>Food Support</h3>
+            <p>
+              Supporting families and individuals who need access
+              to nutritious food.
+            </p>
+          </div>
+
+
+          <div class="cause-card">
+            <div class="cause-icon">📚</div>
+            <h3>Education</h3>
+            <p>
+              Helping children and young people access learning
+              opportunities and educational resources.
+            </p>
+          </div>
+
+
+          <div class="cause-card">
+            <div class="cause-icon">🏥</div>
+            <h3>Medical Support</h3>
+            <p>
+              Extending support to people who need assistance
+              during medical emergencies and difficult situations.
+            </p>
+          </div>
+
+
+          <div class="cause-card">
+            <div class="cause-icon">♿</div>
+            <h3>Disability Support</h3>
+            <p>
+              Promoting inclusion, dignity and opportunities for
+              people living with disabilities.
+            </p>
+          </div>
+
+
+          <div class="cause-card">
+            <div class="cause-icon">🌊</div>
+            <h3>Disaster Relief</h3>
+            <p>
+              Supporting communities affected by floods and
+              other natural disasters.
+            </p>
+          </div>
+
+
+          <div class="cause-card">
+            <div class="cause-icon">🏠</div>
+            <h3>Housing Support</h3>
+            <p>
+              Working towards safer and more dignified living
+              conditions for vulnerable families.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= IMPACT ================= -->
+
+    <section class="impact" id="impact">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow" style="color:#72d3ae;">
+            Our Impact
+          </div>
+
+          <h2>Together, We Create Change.</h2>
+
+          <p>
+            Your support helps us reach people and communities
+            who need it most.
+          </p>
+
+        </div>
+
+
+        <!--
+          IMPORTANT:
+          Replace these numbers with your verified/current
+          foundation impact numbers.
+        -->
+
+        <div class="impact-grid">
+
+          <div class="impact-card">
+            <div class="impact-number">500+</div>
+            <p>People Supported</p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-number">100+</div>
+            <p>Families Reached</p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-number">50+</div>
+            <p>Community Initiatives</p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-number">10+</div>
+            <p>Areas Reached</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= MISSION ================= -->
+
+    <section class="mission">
+
+      <div class="container">
+
+        <div class="mission-box">
+
+          <div class="eyebrow">Our Mission</div>
+
+          <h2>
+            Humanity First. Always.
+          </h2>
+
+          <p>
+            Our mission is to build a more compassionate society
+            where people have access to basic needs, opportunities
+            and support during difficult times. We believe that
+            meaningful change begins when we choose to care.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= DONATE ================= -->
+
+    <section class="donate" id="donate">
+
+      <div class="container">
+
+        <div class="donate-box">
+
+          <div class="donate-content">
+
+            <div class="eyebrow">Make A Difference</div>
+
+            <h2>
+              Your kindness can
+              change a life.
+            </h2>
+
+            <p>
+              Every contribution, big or small, can help us continue
+              supporting people and communities in need.
+            </p>
+
+            <p>
+              If you would like to support SAFAR FOUNDATION,
+              you can contribute through the donation details provided.
+            </p>
+
+            <a href="#contact" class="btn btn-primary">
+              Get In Touch
+            </a>
+
+          </div>
+
+
+          <div class="donation-card">
+
+            <h3>❤️ Support SAFAR FOUNDATION</h3>
+
+            <p>
+              UPI Donation
+            </p>
+
+            <!--
+              IMPORTANT:
+              Yahan apni VERIFIED official UPI ID daalna.
+            -->
+
+            <div class="upi-box">
+              YOUR-UPI-ID@bank
+            </div>
+
+            <p class="donation-note">
+              Please verify the recipient name before completing
+              any donation.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">Connect With Us</div>
+
+          <h2>Let's Work Together</h2>
+
+          <p>
+            Have a question, want to volunteer or support our work?
+            We'd love to hear from you.
+          </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+            <div class="icon">📧</div>
+            <h3>Email</h3>
+            <p>your-email@example.com</p>
+          </div>
+
+
+          <div class="contact-card">
+            <div class="icon">📱</div>
+            <h3>Phone</h3>
+            <p>+91 XXXXX XXXXX</p>
+          </div>
+
+
+          <div class="contact-card">
+            <div class="icon">📍</div>
+            <h3>Location</h3>
+            <p>India</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="footer-brand">
+            <img src="logo.png" alt="SAFAR FOUNDATION Logo">
+
+            <h3>SAFAR FOUNDATION</h3>
+          </div>
+
+          <p>
+            Be the reason someone smiles.
+            Together, let's build a kinder and more compassionate
+            tomorrow.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Quick Links</h4>
+
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#causes">Our Causes</a></li>
+            <li><a href="#impact">Our Impact</a></li>
+            <li><a href="#donate">Donate</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Our Causes</h4>
+
+          <ul class="footer-links">
+            <li>Food Support</li>
+            <li>Education</li>
+            <li>Medical Support</li>
+            <li>Disability Support</li>
+            <li>Disaster Relief</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+        © <span id="year"></span> SAFAR FOUNDATION.
+        All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    // Mobile menu automatically close after clicking a link
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("active");
+      });
+    });
+
+    // Current year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>
