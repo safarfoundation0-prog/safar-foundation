@@ -82,4 +82,17 @@ function openDonate(){document.getElementById('donateModal').classList.add('show
 function closeDonate(){document.getElementById('donateModal').classList.remove('show')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDonate()})
 </script>
+
+<section id="razorpay-donation" style="padding:50px 20px;text-align:center;">
+  <div style="max-width:700px;margin:auto;">
+    <h2>Donate to Safar Foundation ❤️</h2>
+    <p>आप अपनी इच्छानुसार राशि दान कर सकते हैं। / Choose an amount and support our work.</p>
+    <div style="display:flex;justify-content:center;margin-top:24px;">
+      <form>
+<script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TjWCKMmPDhLuS6" async></script>
+</form>
+    </div>
+  </div>
+</section>
+
 </body></html>
