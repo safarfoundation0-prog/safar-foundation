@@ -69,30 +69,31 @@ h1{font-size:clamp(42px,6vw,74px);line-height:.98;margin:20px 0 12px}h1 em{font-
 
 <footer class="footer"><div class="footin"><div><h2>SAFAR FOUNDATION</h2><p>Helping People • Changing Lives<br>इंसानियत के सफर में आपके साथ</p></div><button class="btn" onclick="openDonate()">❤️ Donate Now • अभी दान करें</button></div></footer>
 
-<div class="modal" id="donateModal" onclick="if(event.target===this)closeDonate()"><div class="modalbox">
-<button class="close" onclick="closeDonate()">×</button><div style="font-size:42px">❤️</div>
-<h2>Donate to Safar Foundation</h2><p>अपना योगदान देकर किसी की ज़िंदगी में मुस्कान लाएँ।<br>Your small contribution can create a big change.</p>
-<img class="qr" src="data:image/png;base64,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" alt="Safar Foundation UPI QR Code">
-<div class="upi">UPI ID: q72662595@ybl</div>
-<p style="font-size:13px;color:#68766f">QR को किसी भी UPI App से scan करके payment करें।<br>PhonePe • Google Pay • Paytm • BHIM • Other UPI Apps</p>
-<button class="btn" onclick="closeDonate()">✓ Done • धन्यवाद</button>
-</div></div>
+<div class="modal" id="donateModal" onclick="if(event.target===this)closeDonate()">
+  <div class="modalbox">
+    <button class="close" onclick="closeDonate()">×</button>
+    <div style="font-size:42px">❤️</div>
+    <h2>Donate to Safar Foundation</h2>
+    <p>अपना योगदान देकर किसी की ज़िंदगी में मुस्कान लाएँ।<br>
+    Your small contribution can create a big change.</p>
+
+    <div style="margin:22px auto 8px;display:flex;justify-content:center;align-items:center;min-height:70px;">
+      <form>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TjWCKMmPDhLuS6" async></script>
+      </form>
+    </div>
+
+    <p style="font-size:13px;color:#68766f;margin-top:14px;">
+      UPI Apps और QR से सुरक्षित भुगतान करें।<br>
+      PhonePe • Google Pay • Paytm • BHIM • Other UPI Apps
+    </p>
+  </div>
+</div>
+
 <script>
 function openDonate(){document.getElementById('donateModal').classList.add('show')}
 function closeDonate(){document.getElementById('donateModal').classList.remove('show')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDonate()})
 </script>
-
-<section id="razorpay-donation" style="padding:50px 20px;text-align:center;">
-  <div style="max-width:700px;margin:auto;">
-    <h2>Donate to Safar Foundation ❤️</h2>
-    <p>आप अपनी इच्छानुसार राशि दान कर सकते हैं। / Choose an amount and support our work.</p>
-    <div style="display:flex;justify-content:center;margin-top:24px;">
-      <form>
-<script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TjWCKMmPDhLuS6" async></script>
-</form>
-    </div>
-  </div>
-</section>
 
 </body></html>
